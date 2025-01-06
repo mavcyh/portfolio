@@ -3,59 +3,56 @@ import PageLayout from '@/layouts/BaseLayout.astro'
 import ToolSection from '@/components/ToolSection.astro'
 import Button from '@/components/Button.astro'
 
-const DESIGN = [
-	{
-		name: 'Figma',
-		description: 'Design Tool',
-		href: 'https://www.figma.com/',
-		iconPath: 'figma',
-		iconBgColour: '#000001'
-	}
-]
-
-const PRODUCTIVITY = [
-	{
-		name: 'Arc',
-		description: 'Browser',
-		href: 'https://arc.net/',
-		iconPath: 'arc',
-		iconBgColour: '#414350'
-	},
-	{
-		name: 'Notion',
-		description: 'Note Taking',
-		href: 'https://www.notion.so/product',
-		iconPath: 'notion',
-		iconBgColour: '#EFEFEE'
-	},
-	{
-		name: 'Obsidian',
-		description: 'Long-form Writing',
-		href: 'https://obsidian.md/',
-		iconPath: 'obsidian',
-		iconBgColour: '#7A3EE8'
-	}
-]
-
 const DEVELOPMENT = [
 	{
-		name: 'VS Code',
-		description: 'IDE',
+		name: 'Visual Studio Code',
+		description: 'Code editor',
 		href: 'https://code.visualstudio.com/',
 		iconPath: 'vscode',
 		iconBgColour: '#2C2C32'
 	},
 	{
+		name: 'Visual Studio',
+		description: 'IDE',
+		href: 'https://visualstudio.microsoft.com/',
+		iconPath: 'vs',
+		iconBgColour: '#2C2C32'
+	},
+	{
+		name: 'Git',
+		description: 'Version control',
+		href: 'https://git-scm.com/',
+		iconPath: 'git',
+		iconBgColour: '#2C2C32'
+	},
+	{
 		name: 'ChatGPT',
-		description: 'AI',
+		description: 'My AI assistant',
 		href: 'https://chat.openai.com/',
 		iconPath: 'chatgpt',
 		iconBgColour: '#06A67F'
-	}
+	},
+]
+
+const PRODUCTIVITY = [
+	{
+		name: 'Brave',
+		description: 'Ad-free browser',
+		href: 'https://brave.com/',
+		iconPath: 'brave',
+		iconBgColour: '#414350'
+	},
+	{
+		name: 'Google Calendar',
+		description: 'Tasks and scheduling',
+		href: 'https://workspace.google.com/intl/en-US/products/calendar/',
+		iconPath: 'google_calendar',
+		iconBgColour: '#EFEFEE'
+	},
 ]
 ---
 
-<PageLayout meta={{ title: 'Home' }}>
+<PageLayout meta={{ title: 'Tools' }}>
 	<div class='w-full'>
 		<Button title='Back' href='/' style='button'>
 			<svg
@@ -76,12 +73,10 @@ const DEVELOPMENT = [
 		<div class='mt-5 flex w-full flex-col gap-y-10'>
 			<div>
 				<h1 class='mb-1 text-2xl font-bold'>Tools</h1>
-				<p>Tools and software I use daily</p>
+				<p>Have a look at what I use!</p>
 			</div>
-
-			<ToolSection title='Design' tools={DESIGN} />
-			<ToolSection title='Productivity' tools={PRODUCTIVITY} />
 			<ToolSection title='Development' tools={DEVELOPMENT} />
+			<ToolSection title='Productivity' tools={PRODUCTIVITY} />
 		</div>
 	</div>
 </PageLayout>

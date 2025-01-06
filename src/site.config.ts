@@ -5,9 +5,9 @@ export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
 	author: 'SRLEOM',
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
-	title: 'astro-theme-resume',
+	title: 'Maverick Chin',
 	// Meta property used as the default description meta property
-	description: 'The official Astro Resume Theme',
+	description: 'Astro Resume Theme',
 	// HTML lang property, found in src/layouts/Base.astro L:18
 	lang: 'en-GB',
 	// Meta property, found in src/components/BaseHead.astro L:42
@@ -22,17 +22,6 @@ export const siteConfig: SiteConfig = {
 		}
 	}
 }
-
-export const menuLinks: Array<{ title: string; path: string }> = [
-	{
-		title: 'Home',
-		path: '/'
-	},
-	{
-		title: 'Blog',
-		path: '/blog/'
-	}
-]
 
 // https://expressive-code.com/reference/configuration/
 export const expressiveCodeOptions: AstroExpressiveCodeOptions = {
