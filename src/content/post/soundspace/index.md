@@ -85,9 +85,9 @@ For music studio rental companies, the challenges are equally significant. High 
 The project was from an NYP module called the "Connected Systems Design Project". It required my team to create a connected system using embedded devices, a server, and web interface to solve a problem that would contribute to one of three themes: Green, Sustainability, Livability.
 
 ### My role
-My team brainstormed, but eventually settled on an idea that I had conceived to improve livability, which is none other than the idea right here. Having conceived the idea, I took the role of project lead.
+My team engaged in brainstorming sessions and ultimately decided to pursue an idea I had proposed to enhance livability - the very concept presented here. As the originator of the idea, I assumed the role of project lead.
 
-In the end, I would be in charge of laying the foundations of the project, deciding which technologies and frameworks we would be using, assigning team members roles based on their strengths, making sure that work was done on time, and helping them out whenever issues arose.
+In the end, I would be in charge of laying the foundations of the project, deciding which technologies and frameworks we would be using, assigning team members roles based on their strengths, making sure that work was done on time, and helping them out whenever issues arose, all while doing my own part.
 
 ### Embedded device and modules
 ![Beaglebone® Black Wireless Board](beaglebone_black_wireless.png)

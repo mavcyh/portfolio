@@ -1,5 +1,5 @@
 ---
-title: "Wings of Sustainability: Smart Insect Frass Collection"
+title: "Wings of Sustainability: Smart Black Soldier Fly Farm"
 description: "An innovative solution to sustainably feed a growing population."
 publishDate: "16 Feb 2024"
 updatedDate: "16 Feb 2024"
@@ -29,7 +29,7 @@ By addressing food scarcity through smart solutions, this project demonstrates h
 ### Highlight features
 - Automated feeding and watering system
 - Automated controls for a hygrostat and thermostat to optimise environmental conditions for reproduction and growth
-- Automated frass collection for use as fertiliser
+- Automated frass (insect waste) collection for use as fertiliser
 - Insect prepupae counter to prevent overcrowding in boxes, eliminating need to manually check boxes before transferring prepupae over
 - Dashboard for workers to monitor environmental conditions and check when it is time to harvest
 
@@ -51,16 +51,16 @@ By addressing food scarcity through smart solutions, this project demonstrates h
 
   ![Block diagram of M5Stack FIRE for Black Soldier Fly box](bsf_box_block_diagram.png)
   <p class="text-center mt-[-24px] italic">
-    Block diagram of M5Stack FIRE for Black Soldier Fly box. <a class="inline" href="bsf_box_flowchart.png" target="_blank">Link to detailed flowchart</a>
+    Block diagram of M5Stack FIRE for Black Soldier Fly box. <a class="inline" href="/portfolio/projects/wings-of-sustainability/bsf_box_flowchart.png" target="_blank">Link to detailed flowchart</a>
   </p>
 </div>
 <div class="relative w-full">
 
 <div class="relative w-full">
 
-  ![Block diagram of M5Stack FIRE for atmospheric conditions controller](bsf_static_block_diagram.png)
+  ![Block diagram of M5Stack FIRE for controlling atmospheric conditions](bsf_static_block_diagram.png)
   <p class="text-center mt-[-24px] italic">
-    Block diagram of M5Stack FIRE for atmospheric conditions controller. <a class="inline" href="bsf_static_flowchart.png" target="_blank">Link to detailed flowchart</a>
+    Block diagram of M5Stack FIRE for controlling atmospheric conditions. <a class="inline" href="/portfolio/projects/wings-of-sustainability/bsf_static_flowchart.png" target="_blank">Link to detailed flowchart</a>
   </p>
 </div>
 <div class="relative w-full">
@@ -69,7 +69,7 @@ By addressing food scarcity through smart solutions, this project demonstrates h
 
   ![Block diagram of M5Stack FIRE for automatic feeding and watering](bsf_motor_block_diagram.png)
   <p class="text-center mt-[-24px] italic">
-    Block diagram of M5Stack FIRE for automatic feeding and watering. <a class="inline" href="bsf_motor_flowchart.png" target="_blank">Link to flowchart</a>
+    Block diagram of M5Stack FIRE for automatic feeding and watering. <a class="inline" href="/portfolio/projects/wings-of-sustainability/bsf_motor_flowchart.png" target="_blank">Link to flowchart</a>
   </p>
 </div>
 <div class="relative w-full">
@@ -81,6 +81,28 @@ By addressing food scarcity through smart solutions, this project demonstrates h
   <p class="text-center mt-[-24px] italic">Dashboard for viewing environmental conditions, prepupae count, and harvest status.</p>
 </div>
 <div class="relative w-full">
+
+### Group presentation
+<div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg">
+  <iframe
+    src="https://www.youtube.com/embed/7CZHJPPcxUY"
+    class="absolute top-0 left-0 w-full h-full"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+</div>
+
+### Demo video
+<div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg">
+  <iframe
+    src="https://www.youtube.com/embed/6861dDwTGro"
+    class="absolute top-0 left-0 w-full h-full"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+</div>
 
 ## Full Development Journey
 The project was part of an NYP module called the “Engineering Exploration Project”. It required my team to create a solution based on this driving question:
@@ -108,7 +130,7 @@ The embedded devices provided were [M5Stack FIREs](https://docs.m5stack.com/en/c
 </div>
 <div class="relative w-full">
 
-UIFlow was adequate for simpler projects such as the one shown above (cycling through colours on the LED bar), even for handling a few additional inputs and outputs. However, it proved troublesome when it came to trying to code more complex programs, especially when trying to create a more advanced user interface (which you will see why later).
+UIFlow was adequate for simpler projects such as the one shown above (cycling through colours on the LED bar), even for handling a few additional inputs and outputs. However, it proved troublesome when it came to trying to code more complex programs, especially when trying to create a more advanced user interface (which you will see why later). To give it credit though, it made using the built-in TFT display incredibly easy for simple programs by having a graphic coding interface with drag and drop (the M5Stack FIRE representation on the left).
 
 M5Stack provides an ecosystem of modules for its development kits, from sensors to actuators which can be easily connected using widely available 4-pin Grove cables. Additionally, M5Stack provides drivers for most of its Grove-connected sensors, making it plug and play and incredibly easy to protoype.
 
@@ -161,25 +183,46 @@ Many different insects can be farmed and consumed. The most common ones that peo
 </div>
 <div class="relative w-full">
 
-With all decisions, there is a tradeoff: Black Soldier Flies are not typically eaten whole like other insects due to their harder exoskeletons, compared to insects like crickets or mealworms, making them slightly less versatile. However, they can still be ground down into powder to provide protein, and can then be incorporated into foods such as protein bars, baked goods, pasta, and snacks.
+Like with most decisions, there is a trade-off: Black Soldier Flies are not typically eaten whole like other insects due to their harder exoskeletons, compared to insects like crickets or mealworms, making them slightly less versatile. However, they can still be ground down into powder to provide protein, and can then be incorporated into foods such as protein bars, baked goods, pasta, and snacks.
 
 ### Programming the M5Stack FIREs
+As said earlier, programming was done using Blockly in UIFlow. Due to my all the M5Stack FIREs needing to handle some form of human input, I wanted to UI to look clean and uncluttered. This meant long sections of code purely meant for handling UI components, which made the code long and cluttered... the opposite of what I wanted my UI to be.
 
-<div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg">
-  <iframe
-    src="https://www.youtube.com/embed/7CZHJPPcxUY"
-    class="absolute top-0 left-0 w-full h-full"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
+Now, instead of the codebase simply being long (in the y-axis), for the first time, I had to deal with a _wide_ codebase.
+
+<div class="relative w-full">
+
+  ![UIFlow interface for bsf_box](bsf_box_uiflow.jpg)
+  <p class="text-center mt-[-24px] italic">bsf_box: Everything looks fine... or is it? Did you miss the Subway Footlong long block of code at the start of the first function? Nested code can get LOOONG in Blockly.</p>
 </div>
-<div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg">
-  <iframe
-    src="https://www.youtube.com/embed/6861dDwTGro"
-    class="absolute top-0 left-0 w-full h-full"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
+<div class="relative w-full">
+
+<div class="relative w-full">
+
+  ![UIFlow interface for the bsf_static](bsf_static_uiflow.jpg)
+  <p class="text-center mt-[-24px] italic">bsf_static: Note how programming the display with overlapping components with toggled visibilities is absolutely atrocious (M5Stack FIRE representation on the left side). Getting everything nice and neat required manual pixel calculations and fiddling with the interface. GRRRR.</p>
 </div>
+<div class="relative w-full">
+
+#### A "huge" problem
+
+Originally, I had planned to use 2 M5Stack FIREs for the project, with one attached to the box and communicating with the dashboard, and the other detached to handle controlling atmospheric conditions. However, when programming, I eventually found out that the first M5Stack FIRE _didn't have enough flash memory_ for the program! That came as a shock, not having expected the sheer magnitude of the inefficiency of the code produced by Blockly.
+
+So, the tasks of the first M5Stack FIRE had to be split into two. Separating the motor actuation functions (for automatic feeding and watering) made the most sense, since the motors drew high current and affected the operation of the other modules connected. Admittedly, we were not able to follow best practices here and had to power the motors from the M5Stack FIRE itself instead of a separate power source, as we were not given the equipment to do so.
+
+Additionally, [ESP-NOW](https://www.espressif.com/en/solutions/low-power-solutions/esp-now) was used for communication between the two M5Stack FIREs, as we were not yet trained in how to use the wired communication protocol UART (Universal Asynchronous Receiver/Transmitter), which would have been more efficient to use in hindsight.
+
+#### MQTT
+Communication with the dashboard was done through [MQTT](https://mqtt.org/) (Message Queuing Telemetry Transport), an IoT messaging protocol standard which supports intermittent connectivity (poor connections).
+
+Interestingly, MQTT sends messaging with three levels of Quality of Service (QoS):
+- **QoS 0 (at most once):** Best-effort delivery
+- **QoS 1 (at least once):** Guaranteed delivery (duplicate messages possible)
+- **QoS 2 (exactly once):** Guaranteed delivery
+
+We needed to send basic atmospheric data and the prepupae count to the dashboard, so QoS 0 was the obvious option to use here. However, on the day of the live demonstration (and the days before as well), MQTT would seem to not be working at all, which was a concerning issue. Fiddling with the QoS level sometimes helped, but this was something to note: IoT was truly complex, and made me respect IoT engineers more.
+
+### Takeaway
+This project introduced me to IoT, and although I didn't learn why my MQTT connection was dropping intermittently, it has made me very interested in considering the IoT route: IoT is interesting, and learning how it worked behind the scenes would be very fulfilling. I definitely look forward to the next time I can complete a project requiring "low-level" knowledge of IoT.
+
+Peace out!
