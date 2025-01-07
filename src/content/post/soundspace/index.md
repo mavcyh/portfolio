@@ -1,6 +1,6 @@
 ---
 title: "SoundSpace: Automated Rental Music Studio System"
-description: "An innovative IoT-based system that aims to reduce operational costs while enhancing service quality for users."
+description: "An IoT-based system that aims to reduce operational costs while enhancing service quality for users."
 publishDate: "7 Aug 2024"
 updatedDate: "7 Aug 2024"
 coverImage:
@@ -67,10 +67,10 @@ For music studio rental companies, the challenges are equally significant. High 
 <div class="relative w-full">
 
   ![Room and device monitoring module](admin_dashboard.jpg)
-  <p class="text-center mt-[-24px] italic">Admin dashbaord for real-time monitoring and event tracking.</p>
+  <p class="text-center mt-[-24px] italic">Admin dashboard for real-time monitoring and event tracking.</p>
 </div>
 
-### Demo Video
+### Demo video
 <div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg">
   <iframe
     src="https://www.youtube.com/embed/9HySnrrDjzM"
@@ -82,18 +82,16 @@ For music studio rental companies, the challenges are equally significant. High 
 </div>
 
 ## Full Development Journey
-I'll be taking you through the development journey start to finish, and showing you what I'd learnt. Sit back, it's a long one.
+The project was from an NYP module called the "Connected Systems Design Project". It required my team to create a connected system using embedded devices, a server, and web interface to solve a problem that would contribute to one of three themes: Green, Sustainability, Livability.
 
 ### My role
-The project was for a module in my course at NYP called the "Connected Systems Design Project". It required my team to create a connected system using embedded devices, a server, and web interface to solve a problem that would contribute to one of three themes: Green, Sustainability, Livability.
-
-We brainstormed, but eventually settled on an idea that I had conceived to improve livability, which is none other than the idea right here. Having conceived the idea, I took the role of project lead.
+My team brainstormed, but eventually settled on an idea that I had conceived to improve livability, which is none other than the idea right here. Having conceived the idea, I took the role of project lead.
 
 In the end, I would be in charge of laying the foundations of the project, deciding which technologies and frameworks we would be using, assigning team members roles based on their strengths, making sure that work was done on time, and helping them out whenever issues arose.
 
 ### Embedded device and modules
 ![Beaglebone® Black Wireless Board](beaglebone_black_wireless.png)
-The embedded devices provided were [Beaglebone® Black Wireless Boards](https://www.beagleboard.org/boards/beaglebone-black-wireless), coming with a reasonably powerful Octavo Systems OSD3358 (1Ghz ARM® Cortex-A8) and Texas Instruments WL1835MOD for wireless connectivity. The [Cloud9 IDE](https://aws.amazon.com/cloud9/) was used to program the boards via USB.
+The embedded devices provided were [Beaglebone® Black Wireless Boards](https://www.beagleboard.org/boards/beaglebone-black-wireless), equipped with a reasonably powerful Octavo Systems OSD3358 (1GHz ARM® Cortex-A8) and Texas Instruments WL1835MOD for wireless connectivity. The [Cloud9 IDE](https://aws.amazon.com/cloud9/) was used to program the boards via USB.
 
 Cloud9 was not enjoyable to use: the interface was outdated and there was no sense of any IntelliSense, making code editing painful on the eyes. Even Amazon has decided to stop updating Cloud9 effective July 25 [^1].
 
@@ -131,7 +129,7 @@ Looking at the popularity of different web frameworks[^3], [Next.js](https://nex
 #### Mantine
 We're in an engineering course, not a design course! To make our website look good, I knew using a UI library would help us massively, even if it constricted us a little. There were many options, with really popular ones like the _OG_ Bootstrap and Material UI. However, I pitched for the team to use [Mantine](https://mantine.dev/) as it looked much more unique then the two aforementioned, while having detailed API documentation (which was important for the team members who needed to learn it).
 
-### Block Diagram
+### Block diagram
 <div class="relative w-full">
 
   ![Block diagram of system](block_diagram.png)
@@ -171,7 +169,7 @@ module ... (most likely due to a circular import)
 ```
 Both direct and indirect circular dependencies can occur, with the latter being when _a_ imports _b_, which imports _c_ which imports _a_. Terrifying.
 
-Thus, an \_init_.py file was needed to help centralise the imports, something not needed for many projects. It meant that the structure of the project had to be well planned out, knowing which functions shoud go where and how they should be called to prevent further circular imports. However, this approach made managing the codebase smoother and more efficient, reducing the need for constant scrolling.
+Thus, an \_init_.py file was needed to help centralise the imports, something not needed for many projects. It meant that the structure of the project had to be well planned out, knowing which functions should go where and how they should be called to prevent further circular imports. However, this approach made managing the codebase smoother and more efficient, reducing the need for constant scrolling.
 
 #### Hidden incompatibility
 The server was not fully event-driven, requiring additional complexity due to the need for scheduling and timing logic to manage the opening and locking of doors/instrument lockers based on bookings in the database and the current time. This added a layer of responsibility beyond reacting to real-time events, as it needed to actively monitor and execute scheduled tasks.
@@ -180,7 +178,7 @@ We were to use [eventlet](https://eventlet.readthedocs.io/en/latest/) as the asy
 
 Most of the testing was done with Flask in debug mode, allowing automatic reloading and providing a debugger. Everything worked reasonably well until it came to run everything on a production server: the Socket.IO messages were timing out, meaning that the BeagleBones did not receive the messages at all, almost driving the project to failure. To make it worse, it would work spontaneously, meaning the problem was going to be hard to find.
 
-After researching on it, I narrowed down the main reason to be an [incompatiblity](https://stackoverflow.com/questions/40544989/sending-python-socket-io-message-from-an-apscheduler-job-causes-client-to-hang) between Socket.IO and APScheduler, due to them both using [greenlets](https://greenlet.readthedocs.io/en/latest/), which can be thought of as lightweight threads. However, some form of scheduling was still needed, as the system would never function properly without it.
+After researching on it, I narrowed down the main reason to be an [incompatibility](https://stackoverflow.com/questions/40544989/sending-python-socket-io-message-from-an-apscheduler-job-causes-client-to-hang) between Socket.IO and APScheduler, due to them both using [greenlets](https://greenlet.readthedocs.io/en/latest/), which can be thought of as lightweight threads. However, some form of scheduling was still needed, as the system would never function properly without it.
 
 Around 3 days were spent trying to find a solution, and I had to explore many new things, not limited to:
 - Using different scheduling libraries: schedule and cron, which did not work as well
@@ -215,6 +213,6 @@ I also wanted to make sure that I didn't use any hot glue on the Click Boards th
 ### Takeaways
 This project was probably the _most difficult_ project I had undertaken until that point and really pushed me. I had to learn new languages, libraries, and concepts and utilise them quickly: the project, excluding the research stage was completed in _less than a month_.
 
-However, it's ended up being one of the most fufilling; I felt a great sense of accomplishment after completing it with my team. It's grown my interest in web development, both in the back-end and front-end. It's opened up my eyes (slightly!) to how the websites I view everyday tick. It's taught me how to utiilise open-source embedded development boards to prototype. It's taught me much more that I can't even list it all here, and I am grateful to have been able to finish it, and finish it well.
+However, it's ended up being one of the most fulfilling; I felt a great sense of accomplishment after completing it with my team. It's grown my interest in web development, both in the back-end and front-end. It's opened up my eyes (slightly!) to how the websites I view everyday tick. It's taught me how to utilise open-source embedded development boards to prototype. It's taught me much more that I can't even list it all here, and I am grateful to have been able to finish it, and finish it well.
 
 Till the next time!
