@@ -5,8 +5,8 @@ publishDate: "7 Aug 2024"
 updatedDate: "7 Aug 2024"
 coverImage:
   src: "./generic_music_studio.jpg"
-  alt: "Astro build wallpaper"
-tags: ["fullstack", "beaglebone", "flask", "sql", "rest", "nextjs", "prototype"]
+  alt: "Generic music studio"
+tags: ["fullstack", "beaglebone", "flask", "rest", "nextjs", "prototype"]
 ---
 
 <a href="https://github.com/mavcyh/ege205-group-3-soundspace" target="_blank" class="inline-flex items-center no-underline">

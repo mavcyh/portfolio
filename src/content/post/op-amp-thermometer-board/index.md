@@ -1,5 +1,5 @@
 ---
-title: "Operation Amplifier Thermometer Board"
+title: "Operational Amplifier Thermometer Board"
 description: "A thermometer board based on the operational amplifier circuits with LED temperature indicators."
 publishDate: "13 Jan 2025"
 updatedDate: "13 Jan 2025"
@@ -58,4 +58,4 @@ The design allows for exceptionally easy scaling of the precision or range of th
 </div>
 
 ## Additional Modelling
-Stay tuned for a 3D render including components! It is beneficial to know how the components of a PCB interact in 3D to prevent collisions and help better fit them into enclosures, and I am learning it.
+Stay tuned for a 3D render including components! It is beneficial to know how the components of a PCB interact in 3D to prevent collisions and help better fit them into enclosures.
