@@ -18,6 +18,10 @@ const languages = ['C/ C++', 'Python', 'C#']
 const networking = ['TCP/ IP', 'Routing']
 const others = ['DaVinci Resolve']
 
+const drumming = ['Rockschool Grade 7 Distinction']
+const cycling = ['Polygon Xtrada 6 2021 2x11', '120km', 'Bukit Timah MTB Trail Double Diamond']
+const setup = ['Intel 12400F', 'Nvidia 3060Ti', 'Arctic Liquid Freezer II 240', 'Dell G2724D', 'Asus VG27WQ1B', 'Monsgeek M3', 'Endgame Gear XM2WE', 'Artisan Hayate Otsu SOFT', 'Audient iD4 MKII', 'Beyerdynamic DT770 Pro', 'Behringer XM8500']
+
 const MAX_POSTS = 10
 const allPosts = await getAllPosts()
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
@@ -247,6 +251,12 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			<SkillLayout title='Back-end' skills={backend} />
 			<SkillLayout title='Networking' skills={networking} />
 			<SkillLayout title='Others' skills={others} />
+		</Section>
+
+		<Section title='Hobbies/ Passions'>
+			<SkillLayout title='Drumming' skills={drumming} />
+			<SkillLayout title='Cycling' skills={cycling} />
+			<SkillLayout title='My setup!' skills={setup} />
 		</Section>
 	</div>
 </PageLayout>
