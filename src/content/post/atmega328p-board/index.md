@@ -64,6 +64,6 @@ Special care was given to the silkscreen:
 </div>
 <div class="relative w-full">
 
-  ![ATMega328P project board routing and copper pour](atmega328p_project_board_3d.png)
+  ![ATMega328P project board 3D render](atmega328p_project_board_3d.png)
   <p class="text-center mt-[-24px] italic">3D render of the ATMega328P project board with Autodesk Fusion.</p>
 </div>

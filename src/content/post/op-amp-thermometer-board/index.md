@@ -53,9 +53,16 @@ The design allows for exceptionally easy scaling of the precision or range of th
 
 <div class="relative w-full">
 
-  ![Op-amp thermometer board routing](op_amp_thermometer_board_3d.png)
+  ![Op-amp thermometer board 3D render](op_amp_thermometer_board_3d.png)
   <p class="text-center mt-[-24px] italic">3D render of the op-amp thermometer board with Autodesk Fusion.</p>
 </div>
 
-## Additional Modelling
-Stay tuned for a 3D render including components! It is beneficial to know how the components of a PCB interact in 3D to prevent collisions and help better fit them into enclosures.
+## Additional 3D rendering
+
+3D rendering a PCB helps prevent collisions and ensures a precise fit to enclosures. However, more effort has to be put into making sure that every component has an appropriate 3D package associated with it.
+
+<div class="relative w-full">
+
+  ![Op-amp thermometer board with components 3D render](op_amp_thermometer_board_3d_with_components.png)
+  <p class="text-center mt-[-24px] italic">3D render of the op-amp thermometer board (with components) with Autodesk Fusion.</p>
+</div>
