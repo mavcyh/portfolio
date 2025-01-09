@@ -5,7 +5,7 @@ publishDate: "27 Nov 2024"
 updatedDate: "27 Nov 2024"
 coverImage:
   src: "./atmega328p.jpg"
-  alt: "PCB for ATMega328P"
+  alt: "ATMega328P-PU"
 tags: ["pcb", "eagle", "fusion"]
 ---
 
@@ -30,11 +30,11 @@ This project was about designing a project board for the [ATMega328P](https://ww
 ## Designing the PCB
 The project was part of an NYP module called the "Electronic Systems Design Project". A base schematic was given, but we were required to perform calculations before arriving at the resistor values (E12 and E24, [E series](https://en.wikipedia.org/wiki/E_series_of_preferred_numbers)).
 
-### Schematic (capture)
+### Schematic capture
 Autodesk EAGLE was used for the project.
 <div class="relative w-full">
 
-  ![ATMega328P project board schematic](atmega328p_board_schematic.png)
+  ![ATMega328P project board schematic](atmega328p_project_board_schematic.png)
   <p class="text-center mt-[-24px] italic">ATMega328P project board schematic.</p>
 </div>
 
@@ -59,11 +59,11 @@ Special care was given to the silkscreen:
 ## Final Results
 <div class="relative w-full">
 
-  ![ATMega328P project board routing and copper pour](atmega328p_board.png)
+  ![ATMega328P project board routing and copper pour](atmega328p_project_board.png)
   <p class="text-center mt-[-24px] italic">ATMega328P project board routing and ground plane pour. (Blue: Bottom layer, Red: Top layer)</p>
 </div>
 <div class="relative w-full">
 
-  ![ATMega328P project board routing and copper pour](atmega328p_board_3d.png)
+  ![ATMega328P project board routing and copper pour](atmega328p_project_board_3d.png)
   <p class="text-center mt-[-24px] italic">3D render of the ATMega328P project board with Autodesk Fusion.</p>
 </div>
