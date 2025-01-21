@@ -10,7 +10,7 @@ tags: ["pcb", "eagle", "fusion"]
 ---
 
 ## Project Overview
-This project was about designing a project board for the [ATMega328P](https://www.microchip.com/en-us/product/atmega328p) microcontroller from Microchip Technology (formerly Atmel Corporation), a legendary 8-bit AVR microcontroller due to its use in the ubiquitous open-source Arduino boards (Uno R1-R3). The project board is to be printed eventually as well.
+This project was about designing a project board for the [ATMega328P](https://www.microchip.com/en-us/product/atmega328p) microcontroller from Microchip Technology (formerly Atmel Corporation), a legendary 8-bit AVR microcontroller due to its use in the ubiquitous open-source Arduino boards (Uno R1-R3). The project board was printed as well.
 
 ## Board Features
 
@@ -66,4 +66,14 @@ Special care was given to the silkscreen:
 
   ![ATMega328P project board 3D render](atmega328p_project_board_3d.png)
   <p class="text-center mt-[-24px] italic">3D render of the ATMega328P project board with Autodesk Fusion.</p>
+</div>
+<div class="relative w-full">
+
+  ![ATMega328P project board top down view](atmega328p_project_board_top_down_view.png)
+  <p class="text-center mt-[-24px] italic">The printed ATMega328P project board with all its components soldered!<br>Note: the ATMega328U was used instead.</p>
+</div>
+<div class="relative w-full">
+
+  ![ATMega328P project board top rotated view](atmega328p_project_board_top_rotated_view.png)
+  <p class="text-center mt-[-24px] italic">Rotated view of the ATMega328P project board.</p>
 </div>
