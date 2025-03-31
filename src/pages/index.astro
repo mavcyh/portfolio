@@ -12,14 +12,14 @@ import astro from '../assets/maverick_photo.jpg'
 
 import { getAllPosts, sortMDByDate } from '@/utils'
 
-const frontend = ['HTML/ CSS', 'JavaScript/ TypeScript', 'React', 'Next.js', 'Astro', 'Bootstrap', 'Mantine']
+const frontend = ['HTML/ CSS', 'JavaScript/ TypeScript', 'React', 'Next.js', 'Astro', 'Mantine']
 const backend = ['SQL/ SQLAlchemy', 'Flask', 'SocketIO', 'RESTful API']
 const languages = ['C/ C++', 'Python', 'C#']
 const networking = ['TCP/ IP', 'Routing']
 const others = ['DaVinci Resolve']
 
 const drumming = ['Rockschool Grade 7 Distinction']
-const cycling = ['Polygon Xtrada 6 2021 2x11', '120km', 'Bukit Timah MTB Trail Double Diamond']
+const cycling = ['Polygon Xtrada 6 2021 2x11', '120km Round Island']
 const setup = ['Intel 12400F', 'Nvidia 3060Ti', 'Arctic Liquid Freezer II 240', 'Dell G2724D', 'Asus VG27WQ1B', 'Monsgeek M3', 'Endgame Gear XM2WE', 'Artisan Hayate Otsu SOFT', 'Audient iD4 MKII', 'Beyerdynamic DT770 Pro', 'Behringer XM8500']
 
 const MAX_POSTS = 10
@@ -111,9 +111,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
 		<Section title='About'>
 			<p class='text-muted-foreground'>
-				I am an electronics and computer engineering graduate passionate about embedded systems, IoT, and open-source development.
-				Skilled in programming, hardware design, and full-stack integration,
-				I thrive on solving complex problems and staying at the forefront of technology.
+				I am an electronics and computer engineering student passionate about embedded systems and programming.
 			</p>
 		</Section>
 
@@ -154,30 +152,9 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
 		<Section title='Experience'>
 			<Card
-				heading='Micron Technology'
-				subheading='Firmware Engineer Intern'
-				date='Jun 2025 - Aug 2025'
-				imagePath='/src/assets/micron_logo.png'
-				altText='Micron Technology Logo'
-				imageClass='h-auto w-12 md:-left-16'
-			>
-				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>
-						Designed and implemented Python-based test scripts to validate new SSD firmware features, ensuring alignment with product requirements.
-					</li>
-					<li>
-						Conducted white-box and grey-box testing to thoroughly assess firmware functionality and performance throughout the development process.
-					</li>
-					<li>
-						Investigated and triaged firmware failures, collaborating with development teams to debug and resolve critical issues, enhancing overall firmware stability and reliability.
-					</li>
-					
-				</ul>
-			</Card>
-			<Card
 				heading='WorldSkills Singapore (Electronics)'
-				subheading='Trainee and Competitor, Silver Medal'
-				date='Mar 2024 - May 2025'
+				subheading='Trainee and Competitor'
+				date='Mar 2024 - Apr 2025'
 				imagePath='/src/assets/wss_logo.png'
 				altText='WorldSkills Singapore Logo'
 				imageClass='h-12 w-auto md:-left-16'
@@ -185,34 +162,26 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 				<ul class='ml-4 list-disc text-muted-foreground'>
 					<p class="relative right-4 pt-1 font-bold">Embedded Systems Programming</span>
 					<li>
-						Gained hands-on experience with STM32 MCUs and professional-grade hardware design, reflecting industry standards.
+						Gained hands-on experience with STM32 MCUs.
 					</li>
 					<li>
-						Quickly and accurately analysed component datasheets to integrate them appropriately.
+						Analysed component datasheets to integrate them appropriately.
 					</li>
-					<li>Thoroughly studied and utilised common interface standards:</li>
-					UART/USART, SPI, I2C, USB
+					<li>Utilised and studied common interface standards: SPI, I2C, USB</li>
 					<li>Proficient in using common MCU features and peripherals:</li>
 					GPIO, NVIC/EXTI, RCC, DMA, Low Power modes, ADC, COMP, DAC, TIM/LPTIM, PWM
 					
 					<p class="relative right-4 pt-1 font-bold">Hardware Design Prototyping</p>
 					<li>
-						Designed industry-standard analogue and digital circuits involving ICs and microcontrollers.
+						Designed analogue and digital circuits involving ICs and microcontrollers, simulating them to prevent errors.
 					</li>
 					<li>
-						Simulated circuits to identify and eliminate performance issues and errors.
-					</li>
-					<li>
-						Schematic capture; PCB routing; 3D PCB visualisation to enhance design accuracy for precise fits to enclosures.
-					</li>
-					
+						Schematic capture; PCB routing; 3D PCB visualisation.
+					</li>					
 					
 					<p class="relative right-4 pt-1 font-bold">Fault Finding and Repair</p>
 					<li>
-						Diagnosed faults in analogue and digital circuits using multimeters, oscilloscopes and logic analysers.
-					</li>
-					<li>
-						Performed soldering and rework to IPC standards (IPC-A-610D, IPC-7711/21A).
+						Diagnosed faults in analogue and digital circuits using multimeters and oscilloscopes, performing rework.
 					</li>
 				</ul>
 			</Card>
@@ -231,7 +200,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 					<li>
 						NYP-SICK Product Center Asia Scholarship
 
-						<li>Awarded Director's List every semester</li>
+						<li>Awarded Director's List Y1S1-Y2S2 (up to present)</li>
 					</li>
 				</ul>
 			</Card>
